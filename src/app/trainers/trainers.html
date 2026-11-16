@@ -1,0 +1,37 @@
+
+<h1 class="page-title">Trainers</h1>
+
+<input
+  type="text"
+  placeholder="Search Trainers..."
+  class="search-input"
+  (input)="searchTrainers($event)"
+>
+
+<div class="trainers-container">
+
+  @for (trainer of filteredTrainers; track trainer.id) {
+
+    <div class="card">
+
+      <h3>{{ trainer.name }}</h3>
+
+      <p>Specialization: {{ trainer.specialization }}</p>
+
+      <p>Status: {{ trainer.status }}</p>
+
+      <p>Location: {{ trainer.location }}</p>
+
+      <p>Description: {{ trainer.description }}</p>
+
+      <p>Experience: {{ trainer.experience }} years</p>
+
+    </div>
+
+  }
+
+  @if (filteredTrainers.length === 0) {
+    <p>No trainers found.</p>
+  }
+
+</div>

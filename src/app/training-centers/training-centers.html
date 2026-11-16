@@ -1,0 +1,30 @@
+
+
+
+<h1 class="page-title">Training Centers </h1>
+
+<input
+  type="text"
+  placeholder="Search Training Centers..."
+  class="search-input"
+  (input)="searchCenters($event)"
+>
+<div class="centers-container">
+
+  @for (center of filteredCenters; track center.id) {
+
+    <div class="card">
+      <h3>{{ center.name }}</h3>
+      <p>Status: {{ center.status }}</p>
+      <p>Location: {{ center.location }}</p>
+      <p>Description: {{ center.description }}</p>
+      <p>Accreditation Date: {{ center.accreditationDate }}</p>
+    </div>
+
+  }
+
+  @if (filteredCenters.length === 0) {
+    <p>No centers found.</p>
+  }
+
+</div>

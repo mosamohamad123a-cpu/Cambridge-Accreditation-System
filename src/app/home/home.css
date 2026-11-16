@@ -1,0 +1,14 @@
+.paragraph-box {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 25px;
+      background-color: #f4f8fc;
+      border: 2px solid #2c5f8a;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      text-align: justify;
+    }

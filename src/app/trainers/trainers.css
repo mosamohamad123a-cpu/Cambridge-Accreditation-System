@@ -1,0 +1,83 @@
+
+.trainers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #1976d2;
+}
+
+.card p {
+  color: #444;
+  line-height: 1.6;
+}
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 30px 0;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #3498db;
+  margin: 12px auto 0;
+  border-radius: 5px;
+}
+
+
+.search-input {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  padding: 14px 20px;
+  margin: 25px auto;
+  border: 1px solid #dcdfe6;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #2c3e50;
+  background-color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #a0a7b1;
+}
+
+
+.search-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 26px;
+  }
+
+  .search-input {
+    max-width: 90%;
+    font-size: 14px;
+  }
+}
